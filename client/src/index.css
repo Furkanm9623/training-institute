@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* background-color: black; */
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
