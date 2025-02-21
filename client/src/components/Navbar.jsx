@@ -71,7 +71,7 @@ const Navbar = () => {
 
         {/* Right Section: Navigation & India Flag */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="hover:text-yellow-400 transition">Home</Link>
+          <Link to="/training-institute" className="hover:text-yellow-400 transition">Home</Link>
           <Link to="/about" className="hover:text-yellow-400 transition">About</Link>
           <Link onClick={scrollToContact} className="hover:text-yellow-400 transition">Contact</Link>
           <img
@@ -92,7 +92,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-800 text-center py-4 absolute top-full w-full left-0">
-          <Link to="/" className="block py-2 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/training-institute" className="block py-2 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/about" className="block py-2 hover:text-yellow-400" onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/contact" className="block py-2 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Contact</Link>
           <div className="flex justify-center mt-3">

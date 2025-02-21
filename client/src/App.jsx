@@ -25,7 +25,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route
-          path="/"
+          path="/training-institute"
           element={
             <>
               <Carousel />
