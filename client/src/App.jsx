@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route,useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Carousel from "./components/Crousel";
 import TrainingSection from "./components/TrainingSection";
@@ -12,8 +12,14 @@ import Certifications from "./components/Certification";
 import CourseDetails from "./pages/CourseDetails";
 import OurProjects from "./components/OurProjects";
 import ProjectDetails from "./pages/ProjectDetails";
+import AboutUs from "./components/AboutUs";
 
 function App() {
+  const location = useLocation(); // Get the current route
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when the route changes
+  }, [location.pathname]);
   return (
     <>
       <Navbar />
@@ -36,6 +42,7 @@ function App() {
         />
         <Route path="/course/:id" element={<CourseDetails />} />
        <Route path="/project-details/:id" element={<ProjectDetails/>}/>
+       <Route path="/about" element={<AboutUs/>}/>
       </Routes>
       <ContactUs />
               <Footer />

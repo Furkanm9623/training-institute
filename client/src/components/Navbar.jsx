@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes, FaPhone, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate()
   // WhatsApp Number & Pre-filled Message
   const phoneNumber = "918584009623"; // No '+', no spaces, just country code + number
   const message = encodeURIComponent(`📌 Hi, BimBess Ltd! 
@@ -38,7 +38,7 @@ const Navbar = () => {
     <nav className="bg-gray-800 text-white p-3 fixed w-full top-0 z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
         {/* Left Section: Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2" onClick={()=>navigate('/')}>
           <img
             src="https://i.pinimg.com/236x/ba/93/38/ba9338d1b2d869497e27bee86cef8f8d.jpg"
             alt="logo"
@@ -62,9 +62,11 @@ const Navbar = () => {
             <span className="hover:text-green-400 transition">+91 8584009623</span>
           </div>
           <div className="flex items-center space-x-2">
-            <FaEnvelope />
-            <span>bimbessinfotech@gmail.com</span>
-          </div>
+  <FaEnvelope />
+  <a href="mailto:bimbessinfotech@gmail.com" className="hover:text-yellow-400 transition">
+    bimbessinfotech@gmail.com
+  </a>
+</div>
         </div>
 
         {/* Right Section: Navigation & India Flag */}

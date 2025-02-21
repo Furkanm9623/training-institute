@@ -69,7 +69,7 @@ import { FaCheckCircle, FaUserTie } from "react-icons/fa";
 const coursesData = {
   "1": {
     title: "Civil Structure",
-    image: "https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg",
+    image: "https://arabianinfotech.com/cache/menu/programs/program-preview-1.jpeg",
     overview: "Master structural engineering with advanced tools like STAAD, ETABS, and SAFE.",
     learn: [
       "Structural load analysis",
