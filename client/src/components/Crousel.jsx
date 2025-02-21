@@ -37,15 +37,17 @@ const Carousel = () => {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id} className="relative flex justify-center items-center">
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-auto max-h-[600px] object-contain"
-            />
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-start px-10 md:px-20 text-white">
-              <h1 className="text-3xl md:text-4xl font-bold">{slide.title}</h1>
-              <p className="text-base md:text-lg mt-2">{slide.description}</p>
-              <button className="mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
+            <div className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] flex items-end">
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-contain object-bottom"
+              />
+            </div>
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-start px-6 md:px-12 text-white">
+              <h1 className="text-lg sm:text-2xl md:text-4xl font-bold">{slide.title}</h1>
+              <p className="text-sm sm:text-base md:text-lg mt-2">{slide.description}</p>
+              <button className="mt-4 px-4 sm:px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
                 Explore Courses
               </button>
             </div>
