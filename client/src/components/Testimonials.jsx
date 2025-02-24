@@ -68,7 +68,9 @@ const Testimonials = () => {
                       className="w-14 h-14 rounded-full mr-3 border-2 border-blue-400"
                     />
                     <div>
-                      <h3 className="text-lg font-semibold">{testimonial.name}</h3>
+                      <h3 className="text-lg font-semibold">
+                        {testimonial.name}
+                      </h3>
                       <p className="text-gray-500 text-sm">{testimonial.role}</p>
                     </div>
                   </div>
@@ -78,13 +80,13 @@ const Testimonials = () => {
             ))}
           </Swiper>
 
-          {/* Navigation Arrows */}
-          <div className="flex justify-center mt-6 space-x-4">
-            <button className="swiper-button-prev bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
-              <FaChevronLeft />
+          {/* Small Circular Navigation Arrows */}
+          <div className="flex justify-center mt-4 space-x-4">
+            <button className="swiper-button-prev w-8 h-8 rounded-full bg-white text-gray-500 border border-gray-300 hover:bg-gray-100 flex items-center justify-center transition-all">
+              <FaChevronLeft size={12} />
             </button>
-            <button className="swiper-button-next bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
-              <FaChevronRight />
+            <button className="swiper-button-next w-8 h-8 rounded-full bg-white text-gray-500 border border-gray-300 hover:bg-gray-100 flex items-center justify-center transition-all">
+              <FaChevronRight size={12} />
             </button>
           </div>
         </div>
